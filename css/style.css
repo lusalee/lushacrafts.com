@@ -230,6 +230,12 @@ h3 { font-size: 1.35rem; margin-bottom: 8px; }
   align-items: center;
   justify-content: center;
   font-size: 3rem;
+  overflow: hidden;
+}
+.product-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .product-card-body { padding: 20px; }
 .product-card-body h3 { margin-bottom: 8px; }
@@ -324,6 +330,12 @@ h3 { font-size: 1.35rem; margin-bottom: 8px; }
   align-items: center;
   justify-content: center;
   font-size: 3rem;
+  overflow: hidden;
+}
+.case-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .case-card-body { padding: 24px; }
 .case-tag {
@@ -533,6 +545,12 @@ h3 { font-size: 1.35rem; margin-bottom: 8px; }
   align-items: center;
   justify-content: center;
   font-size: 5rem;
+  overflow: hidden;
+}
+.company-intro-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .company-intro h2 { font-size: 1.8rem; margin-bottom: 16px; }
 .company-intro h2 em { font-style: normal; color: var(--green); }
@@ -576,6 +594,12 @@ h3 { font-size: 1.35rem; margin-bottom: 8px; }
   align-items: center;
   justify-content: center;
   font-size: 4rem;
+  overflow: hidden;
+}
+.cat-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .cat-card:nth-child(1) .cat-card-img { background: #e8f5e9; }
 .cat-card:nth-child(2) .cat-card-img { background: #f1f8e9; }
