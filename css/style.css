@@ -517,10 +517,239 @@ h3 { font-size: 1.35rem; margin-bottom: 8px; }
   .cases-grid, .products-grid { grid-template-columns: 1fr; }
 }
 
+/* --- Company Intro Banner (like 海虹) --- */
+.company-intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+  padding: 48px 0;
+}
+.company-intro-img {
+  background: linear-gradient(135deg, var(--green-pale), var(--green-light));
+  border-radius: var(--radius-lg);
+  min-height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5rem;
+}
+.company-intro h2 { font-size: 1.8rem; margin-bottom: 16px; }
+.company-intro h2 em { font-style: normal; color: var(--green); }
+.company-intro .intro-text { color: var(--text-light); line-height: 1.8; margin-bottom: 20px; }
+.company-intro .intro-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 20px 0;
+}
+.company-intro .intro-highlights span {
+  background: var(--green-pale);
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--green-dark);
+}
+
+/* --- Product Category Grid (like 圣杰) --- */
+.cat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+.cat-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+.cat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+.cat-card-img {
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+}
+.cat-card:nth-child(1) .cat-card-img { background: #e8f5e9; }
+.cat-card:nth-child(2) .cat-card-img { background: #f1f8e9; }
+.cat-card:nth-child(3) .cat-card-img { background: #fbe9e7; }
+.cat-card:nth-child(4) .cat-card-img { background: #e3f2fd; }
+.cat-card:nth-child(5) .cat-card-img { background: #f3e5f5; }
+.cat-card:nth-child(6) .cat-card-img { background: #fff8e1; }
+.cat-card:nth-child(7) .cat-card-img { background: #e0f2f1; }
+.cat-card:nth-child(8) .cat-card-img { background: #fce4ec; }
+.cat-card-body {
+  padding: 16px;
+  text-align: center;
+}
+.cat-card-body h3 { font-size: 1rem; margin-bottom: 4px; }
+.cat-card-body p { font-size: 0.82rem; color: var(--text-light); }
+
+/* --- Client Logo Grid --- */
+.client-grid {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  opacity: 0.7;
+}
+.client-logo {
+  width: 120px;
+  height: 60px;
+  background: var(--gray-100);
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--gray-600);
+  text-align: center;
+  padding: 8px;
+}
+
+/* --- Blog Preview Cards --- */
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+}
+.blog-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.blog-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+.blog-card-img {
+  height: 180px;
+  background: var(--green-pale);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+}
+.blog-card-body { padding: 20px; }
+.blog-card-body .blog-date {
+  font-size: 0.82rem;
+  color: var(--text-light);
+  margin-bottom: 8px;
+}
+.blog-card-body h3 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+.blog-card-body p {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+/* --- Production Process ——- */
+.process-timeline {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  text-align: center;
+  margin: 32px 0;
+}
+.process-step {
+  position: relative;
+  padding: 32px 16px;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+}
+.process-step::after {
+  content: '→';
+  position: absolute;
+  right: -18px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+  color: var(--green);
+  font-weight: bold;
+}
+.process-step:last-child::after { content: ''; }
+.process-step .step-num {
+  width: 40px;
+  height: 40px;
+  background: var(--green);
+  color: var(--white);
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+.process-step h4 { font-size: 0.95rem; margin-bottom: 6px; }
+.process-step p { font-size: 0.82rem; color: var(--text-light); }
+
+/* --- Breadcrumb --- */
+.breadcrumb {
+  background: var(--gray-50);
+  padding: 16px 0;
+  font-size: 0.9rem;
+}
+.breadcrumb a { color: var(--text-light); }
+.breadcrumb a:hover { color: var(--green); }
+.breadcrumb span { color: var(--text); }
+
+/* --- Page Hero --- */
+.page-hero {
+  background: linear-gradient(135deg, var(--green-dark), var(--green));
+  color: var(--white);
+  padding: 60px 0;
+  text-align: center;
+}
+.page-hero h1 { color: var(--white); margin-bottom: 12px; }
+.page-hero p { color: var(--green-pale); font-size: 1.1rem; }
+
+/* --- Blog Article --- */
+.blog-article { max-width: 800px; margin: 0 auto; }
+.blog-article h2 { margin-top: 40px; margin-bottom: 16px; }
+.blog-article h3 { margin-top: 28px; margin-bottom: 12px; }
+.blog-article p { margin-bottom: 16px; color: var(--text-light); line-height: 1.8; }
+.blog-article ul, .blog-article ol { margin: 16px 0 24px 24px; color: var(--text-light); }
+.blog-article li { margin-bottom: 8px; }
+.blog-article .highlight-box {
+  background: var(--green-pale);
+  border-left: 4px solid var(--green);
+  padding: 16px 20px;
+  border-radius: 0 var(--radius) var(--radius) 0;
+  margin: 24px 0;
+}
+
+/* --- Responsive additions --- */
+@media (max-width: 768px) {
+  .company-intro { grid-template-columns: 1fr; }
+  .process-timeline { grid-template-columns: repeat(2, 1fr); }
+  .process-step::after { display: none; }
+  .cat-grid { grid-template-columns: repeat(2, 1fr); }
+  .blog-grid { grid-template-columns: 1fr; }
+}
+
 @media (max-width: 480px) {
   .section { padding: 48px 0; }
   .hero-badges { gap: 8px; }
   .hero-badge { font-size: 0.8rem; padding: 6px 14px; }
   .stats-bar { grid-template-columns: 1fr 1fr; }
   .footer-grid { grid-template-columns: 1fr; }
+  .process-timeline { grid-template-columns: 1fr; }
+  .cat-grid { grid-template-columns: 1fr; }
+  .blog-grid { grid-template-columns: 1fr; }
 }
