@@ -791,3 +791,4 @@ h3 { font-size: 1.35rem; margin-bottom: 8px; }
   text-align: center;
   padding: 12px;
 }
+@media(max-width:768px){nav a,.menu-toggle,.mobile-menu a,footer a{min-height:40px;display:inline-flex;align-items:center;padding:8px 4px}}

@@ -4,7 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Contact Dongguan Lusha Crafts — artificial plants factory in China. WhatsApp +86 186 8866 1920, Email lisalee@lushacrafts.com. Request quote, samples, or factory visit.">
-  <title>Contact Us — Artificial Plants Factory | Lusha Crafts</title>
+  <title>Contact Us | Lusha Crafts</title>
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Contact | Lusha Crafts">
+  <meta property="og:description" content="Contact Dongguan Lusha Crafts for quotes, samples and factory visits.">
+  <meta property="og:url" content="https://lushacrafts.com/contact.html">
   <link rel="stylesheet" href="css/style.css">
   <link rel="canonical" href="https://lushacrafts.com/contact.html">
   <script type="application/ld+json">
@@ -105,9 +109,9 @@
       <div>
         <h2>Send a Message</h2>
         <p style="color:var(--text-light); margin-bottom:24px;">
-          Fill out the form below and we'll get back to you within 2 hours.
+          Fill out the form below. Submitting opens your email app with the details filled in — please review and send it there.
         </p>
-        <form class="contact-form" action="#" method="POST">
+        <form class="contact-form" id="inquiryForm" onsubmit="return submitInquiry(event)">
           <input type="text" name="name" placeholder="Your Name / Company *" required>
           <input type="email" name="email" placeholder="Email Address *" required>
           <input type="tel" name="phone" placeholder="Phone / WhatsApp (optional)">
@@ -189,5 +193,23 @@
   </div>
 </footer>
 
+<script>
+function submitInquiry(e){
+  e.preventDefault();
+  var f=e.target;
+  var v=function(n){var el=f.querySelector('[name="'+n+'"]');return el?el.value.trim():'';};
+  var name=v('name'),email=v('email'),phone=v('phone'),product=v('product'),msg=v('message');
+  var sel=f.querySelector('[name="product"]');
+  var productLabel=sel&&sel.selectedIndex>0?sel.options[sel.selectedIndex].text:'';
+  var body='Hello Lusha Crafts,\n\nI would like to request a quotation.\n\n'
+    +'Name / Company: '+name+'\nEmail: '+email+'\n'
+    +(phone?'Phone / WhatsApp: '+phone+'\n':'')
+    +(productLabel?'Product interest: '+productLabel+'\n':'')
+    +'\nRequirements:\n'+(msg||'(not specified)')+'\n\nBest regards,\n'+name;
+  var subject='Product inquiry from '+name;
+  window.location.href='mailto:lisalee@lushacrafts.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
+  return false;
+}
+</script>
 </body>
 </html>
