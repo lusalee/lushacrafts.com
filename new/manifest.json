@@ -10,7 +10,7 @@
   "input_sha256": "ecc569fd617d890ffda5f504ce5f8d50458a5d804308d61170ec1271c700b1ac",
   "inquiry": {
     "mode": "mailto",
-    "seller_email": "lil3win@126.com",
+    "seller_email": "lisalee@lushacrafts.com",
     "contact_url": null,
     "on_site_delivery": false,
     "on_site_storage": false,
@@ -20,7 +20,7 @@
     "check": "complete_email_address_present_in_supplied_utf8_source",
     "source": {
       "file": "sources/public-contact.md",
-      "locator": "Public seller email lil3win@126.com, JSON-LD line 17 and contact block line 81",
+      "locator": "Public seller email lisalee@lushacrafts.com, JSON-LD line 17 and contact block line 81",
       "file_sha256": "bad549583d223513d74c2d7d1a2eb87839faa0b0dbb7e774db1c07cd841f877d"
     },
     "public_contact_authorization_verified": false,
